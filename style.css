@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:weight@700&display=swap'");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-colors: hsl(222, 26%, 31%);
+    --second-color: hsl(223, 31%, 20%);
+    --screen-color: hsl(224, 36%, 15%);
+    --key-background: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --text: hsl(221, 14%, 31%);
+    --key-special: hsl(225, 21%, 49%);
+    --key-special-shadow: hsl(224, 28%, 35%);
+    --color-white: #fff;
+    --key-red: hsl(6, 63%, 50%);
+    --key-red-shaddow: hsl(6, 70%, 34%);
+}
+
+html.theme2 {
+    --background-colors: hsl(0, 0%, 90%);
+    --second-color: hsl(0, 5%, 81%);
+    --screen-color: hsl(0, 0%, 93%);
+    --key-background: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --text: hsl(60, 10%, 19%);
+    --key-special: hsl(185, 42%, 37%);
+    --key-special-shadow: hsl(185, 58%, 25%);
+    --color-white: #fff;
+    --key-red: hsl(25, 98%, 40%);
+    --key-red-shaddow: hsl(25, 99%, 27%);
+}
+
+html.theme3 {
+    --background-colors: hsl(268, 75%, 9%);
+    --second-color: hsl(268, 71%, 12%);
+    --screen-color: hsl(268, 71%, 12%);
+    --key-background: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    --text: hsl(52, 100%, 62%);
+    --key-special: hsl(268, 47%, 21%);
+    --key-special-shadow: hsl(290, 70%, 36%);
+    --color-white: #fff;
+    --key-red: hsl(176, 100%, 44%);
+    --key-red-shaddow: hsl(177, 92%, 70%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    top: 96vh;
+    position: absolute;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 700;
+    flex-direction: column;
+    font-family: 'League Spantan', sans-serif;
+    background-color: var(--background-colors);
+    /* color: var(--color-white); */
+}
+
+.equation {
+    color: var(--color-white);
+    font-size: 30px;
+}
+
+.sol {
+    color: var(--color-white);
+    font-size: 20px;
+}
+
+html.theme2 .equation,
+html.theme3 .equation {
+    color: var(--text);
+}
+
+html.theme2 .sol,
+html.theme3 .sol {
+    color: var(--text);
+}
+
+html.theme2 .header,
+html.theme3 .header {
+    color: var(--text);
+}
+
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    margin: 50px 0 10px;
+    position: relative;
+    color: var(--color-white);
+}
+
+.header>h1 {
+    font-size: 32px;
+    font-weight: 700;
+    /* color: var(--color-white); */
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+
+.header>h6 {
+    align-self: center;
+}
+
+h6 {
+    font-size: 13px;
+    color: var(--bg-keys);
+    position: relative;
+    left: 140px;
+}
+
+.theme {
+    height: 30px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: var(--second-color);
+    position: relative;
+    left: 150px;
+}
+
+label {
+    justify-content: space-between;
+    position: relative;
+    top: -25px;
+}
+
+[id="theme1"],
+[id="theme2"],
+[id="theme3"] {
+    appearance: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    top: 7px;
+    transition: 0.5s;
+}
+
+input:checked {
+    background-color: var(--key-red);
+}
+
+[id="theme1"] {
+    left: 10px;
+}
+
+label[for="theme1"] {
+    left: 13px;
+}
+
+[id="theme2"] {
+    left: 33px;
+}
+
+label[for="theme2"] {
+    left: 20px;
+}
+
+[id="theme3"] {
+    left: 55px;
+}
+
+label[for="theme3"] {
+    left: 26px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+    height: 80px;
+    padding: 0 10px;
+    border-radius: 10px;
+    /* padding: 10px; */
+    text-align: end;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    background-color: var(--screen-color);
+}
+
+
+.buttons {
+    background-color: var(--second-color);
+    /* width: 100%; */
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.buttons button {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    margin: 8px;
+    padding: 8px 0;
+    border-radius: 5px;
+    background-color: var(--key-background);
+    box-shadow: 0 5px var(--key-shadow);
+    height: 50px;
+}
+
+.buttons .sp {
+    background-color: var(--key-special);
+    box-shadow: 0 5px var(--key-special-shadow);
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+.buttons .red {
+    background-color: var(--key-red);
+    box-shadow: 0 5px var(--key-red-shaddow);
+    color: var(--color-white);
+
+
+}
